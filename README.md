@@ -4,13 +4,14 @@ Exercise to implement SARSA and Q-Learning on a Grid-World problem.
 
 You will solve several variants of the Grid World problem (a sample world is shown below in Figure 1).
 
-![Figure 1](https://github.com/muskanjindal78/rl-sarsa-qlearning/blob/main/env.png?raw=true)
+![Figure 1](https://github.com/muskanjindal78/rl-sarsa-qlearning/blob/main/images/env.png?raw=true)
+
 
 This is a grid world with 4 deterministic actions ('up', 'down', 'left', 'right'). The agent transitions to the next state determined by the direction of the action chosen with a probability of $p \in [0, 1]$. We also define a parameter called $b \in [0, 1]$ (Set $b=0.5$ for this assignment). Consider the direction of the action chosen as the agent's “North”. For example, if the action is 'left', it is the agent's North, and the agent's East would be the direction of the action 'up'. Figure 2 provides an illustration of the same. The agent transitions to the state West of the chosen action with probability $(1-p)\times b$, and to the East of the chosen action with probability $(1-p) \times (1-b)$.
 
  The environment may also have a wind blowing that can push the agent one **additional** cell to the right **after transitioning to the new state** with a probability of 0.4. An episode is terminated either when a goal is reached or when the timesteps exceed 100. Transitions that take you off the grid will not result in any change in state.
 
- ![Figure 2](https://github.com/muskanjindal78/rl-sarsa-qlearning/blob/main/env1.png?raw=true)
+ ![Figure 2](https://github.com/muskanjindal78/rl-sarsa-qlearning/blob/main/images/env1.png?raw=true)
 
 The dimensions of the grid are $10 \times 10$. The following types of states exist:
 
